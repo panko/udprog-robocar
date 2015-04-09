@@ -84,7 +84,7 @@ int main ( int argc, char* argv[] )
      // If you use this sample you should add your copyright information here too:
 
      std::cout << "This SHM Client program has been modified by Peter Panko" << std::endl
-     << "Copyright (C) 2014, 2015 Norbert Bátfai" << std::endl
+     << "Copyright (C) 2014, 2015 Peter Panko" << std::endl
      << "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>" << std::endl;
 
 
@@ -99,8 +99,8 @@ int main ( int argc, char* argv[] )
 
      try {
           boost::asio::io_service io_service;
-          myShmClient.start ( io_service, port.c_str() );
-	 //  myShmClient.start10 ( io_service, port.c_str() ); // 
+         // myShmClient.start ( io_service, port.c_str() );
+	  myShmClient.start10 ( io_service, port.c_str() ); // 
      } catch ( std::exception& e ) {
           std::cerr << "Exception: " << e.what() << "\n";
      }
